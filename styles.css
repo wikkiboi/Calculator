@@ -8,14 +8,26 @@
 }
 
 button {
-    font-size: 0px;
     text-align: center;
     width: 30px;
     height: 30px;
     background-color: white;
-    color: black;
-    border: none;
-    border-radius: 16px;
+    border-radius: 8px;
     font-size: 16px;
     margin: 2px;
 }
+
+#row0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.input-display {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    margin-right: 12px;
+}
+
+
