@@ -24,10 +24,26 @@ button {
     flex-direction: row;
 }
 .input-display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
     width: 100px;
     height: 30px;
     background-color: white;
     margin-right: 12px;
+}
+
+button:hover {
+    background-color: chartreuse;
+}
+
+button:active {
+    background-color: yellowgreen;
+}
+
+.previousScreen {
+    font-size: 12px;
 }
 
 
