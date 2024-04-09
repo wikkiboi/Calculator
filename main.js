@@ -15,8 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let previousScreen = document.querySelector(".previousScreen");
 
     numbers.forEach((number) => number.addEventListener("click", (e) => {
-        handleNumber(e.target.textContent); //e.target.textContent gets button text after clicking on it
-        currentScreen.textContent = currentInput;
+        if (!currentInput.includes(".")) {
+            handleNumber(e.target.textContent); //e.target.textContent gets button text after clicking on it
+            currentScreen.textContent = currentInput;
+        }
     }))
 
     operators.forEach((op) => op.addEventListener("click", (e) => {
@@ -74,7 +76,7 @@ function calculate() {
         previousInput /= currentInput;
     }
 
-    previousInput = roundNumber(previousInput);
+    previousInput = roundNumber(previousInput); //round number to 4 decimal places after calculating
     previousInput = previousInput.toString();
     currentInput = previousInput.toString();
 }
